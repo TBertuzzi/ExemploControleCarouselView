@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:ExemploControleCarouselView" 
+             xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             x:Class="ExemploControleCarouselView.MainPage">
+    
+    
+    <cv:CarouselViewControl x:Name="carousel"
+        ItemsSource="{Binding Views}"
+        ShowArrows="true"
+        ShowIndicators="true"
+        PositionSelectedCommand="{Binding PositionCommand}"
+        PositionSelected="Handle_PositionSelected"
+        Scrolled="Handle_Scrolled"
+        Orientation="Horizontal">
+
+        <!--<cv:CarouselViewControl Orientation="Horizontal" InterPageSpacing="10" Position="{Binding myPosition}" ItemsSource="{Binding Views}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <controls:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:MyView />
+                    </DataTemplate>
+                </controls:CarouselViewControl.ItemTemplate>
+            </controls:CarouselViewControl>-->
+
+    </cv:CarouselViewControl>
+</ContentPage>
